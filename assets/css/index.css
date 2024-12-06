@@ -11858,7 +11858,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
   flex-direction: column;
   background-image: url(https://images.unsplash.com/photo-1594643781026-abcb610d394f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-repeat: no-repeat;
@@ -11895,14 +11894,4 @@ body {
 }
 .nav-item a:hover {
   color: orange !important;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.empty {
-  height: 100px;
 }/*# sourceMappingURL=index.css.map */
