@@ -3,4 +3,29 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table-dark {
+  background-color: #1c1c1e;
+  border-color: #2a2a2c;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #2e2e31;
+}
+
+.table-dark th {
+  color: #f8f9fa;
+}
+
+.table-dark td {
+  vertical-align: middle;
+}
+
+.btn-sm {
+  font-size: 0.85rem;
 }/*# sourceMappingURL=pages.css.map */
