@@ -1,0 +1,46 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  flex-direction: column;
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+}
+
+.edustore {
+  font-family: 'Pacifico', cursive !important;
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 50%,
+    rgba(255, 255, 0, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.nav-item {
+  a {
+    &:hover {
+      color: $primary;
+    }
+  }
+}
