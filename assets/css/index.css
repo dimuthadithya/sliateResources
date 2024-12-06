@@ -11848,8 +11848,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Roboto", serif;
-  height: 100svh;
-  height: 100vh;
+  height: 100dvh;
+  min-height: 100dvh;
   justify-content: space-between;
 }
 
