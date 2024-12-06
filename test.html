@@ -5,22 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PDF.js Viewer</title>
     <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
       #pdf-container {
         border: 1px solid #ccc;
         margin: 20px auto;
         text-align: center;
         overflow: auto;
-        height: 500px;
-        width: 80%;
+        height: 80vh;
+        width: 100%;
       }
       canvas {
         margin: 10px auto;
         display: block;
       }
+      .zoom-controls {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <h1>PDF.js Viewer Example</h1>
+    <div class="zoom-controls">
+      <button id="zoom-in">Zoom In</button>
+      <button id="zoom-out">Zoom Out</button>
+    </div>
     <div id="pdf-container"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
@@ -31,10 +47,14 @@
 
       const url = './one.pdf'; // Replace with the path to your PDF
       const pdfContainer = document.getElementById('pdf-container');
+      let zoomLevel = 1; // Initial zoom level
 
       // Function to render PDF
       async function renderPDF(url) {
         const pdf = await pdfjsLib.getDocument(url).promise;
+
+        // Clear previous content
+        pdfContainer.innerHTML = '';
 
         // Loop through all pages and render them
         for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
@@ -44,7 +64,7 @@
           const canvas = document.createElement('canvas');
           const context = canvas.getContext('2d');
 
-          const viewport = page.getViewport({ scale: 1.5 });
+          const viewport = page.getViewport({ scale: zoomLevel });
           canvas.width = viewport.width;
           canvas.height = viewport.height;
 
@@ -58,6 +78,19 @@
       // Call the function with the specified PDF URL
       renderPDF(url).catch((error) => {
         console.error('Error rendering PDF:', error);
+      });
+
+      // Zoom in functionality
+      document.getElementById('zoom-in').addEventListener('click', () => {
+        zoomLevel += 0.25; // Increase zoom level by 0.25
+        renderPDF(url); // Re-render the PDF with the new zoom level
+      });
+
+      // Zoom out functionality
+      document.getElementById('zoom-out').addEventListener('click', () => {
+        zoomLevel -= 0.25; // Decrease zoom level by 0.25
+        if (zoomLevel < 0.25) zoomLevel = 0.25; // Prevent zooming out too much
+        renderPDF(url); // Re-render the PDF with the new zoom level
       });
     </script>
   </body>
