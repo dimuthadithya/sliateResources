@@ -1,0 +1,11 @@
+body {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  flex-grow: 1;
+  border: 2px solid yellowgreen;
+}/*# sourceMappingURL=pastpaers.css.map */

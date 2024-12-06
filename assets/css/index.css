@@ -11874,10 +11874,6 @@ body {
   inset: 0;
 }
 
-.navbar-brand {
-  font-family: "Pacifico", cursive;
-}
-
 .edustore {
   font-family: "Pacifico", cursive !important;
   font-size: 3rem;
@@ -11887,11 +11883,4 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-emphasis-color: transparent;
-}
-
-.nav-item a {
-  transition: color 0.1s ease-in;
-}
-.nav-item a:hover {
-  color: orange !important;
 }/*# sourceMappingURL=index.css.map */

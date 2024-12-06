@@ -1,0 +1,13 @@
+.nav-item {
+  a {
+    transition: color 0.1s ease-in;
+
+    &:hover {
+      color: orange !important;
+    }
+  }
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+}

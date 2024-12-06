@@ -31,10 +31,6 @@ body {
   }
 }
 
-.navbar-brand {
-  font-family: 'Pacifico', cursive;
-}
-
 .edustore {
   font-family: 'Pacifico', cursive !important;
   font-size: 3rem;
@@ -49,14 +45,4 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-emphasis-color: transparent;
-}
-
-.nav-item {
-  a {
-    transition: color 0.1s ease-in;
-
-    &:hover {
-      color: orange !important;
-    }
-  }
 }
