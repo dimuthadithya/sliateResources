@@ -11863,6 +11863,7 @@ body {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
+  position: relative;
 }
 .content::before {
   position: absolute;
