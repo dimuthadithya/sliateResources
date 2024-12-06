@@ -11863,7 +11863,9 @@ body {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
-  position: relative;
+}
+.content > div {
+  border: 3px solid red;
 }
 .content::before {
   position: absolute;
