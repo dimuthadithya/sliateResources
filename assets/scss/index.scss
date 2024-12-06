@@ -5,7 +5,6 @@ body {
   flex-direction: column;
   font-family: 'Roboto', serif;
   height: 100vh;
-  overflow: hidden;
 }
 
 .content {
@@ -53,8 +52,10 @@ body {
 
 .nav-item {
   a {
+    transition: color 0.1s ease-in;
+
     &:hover {
-      color: $primary;
+      color: orange !important;
     }
   }
 }
@@ -66,5 +67,5 @@ footer {
 }
 
 .empty {
-  height: 200px;
+  height: 100px;
 }

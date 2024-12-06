@@ -11849,7 +11849,6 @@ body {
   flex-direction: column;
   font-family: "Roboto", serif;
   height: 100vh;
-  overflow: hidden;
 }
 
 .content {
@@ -11889,8 +11888,11 @@ body {
   text-emphasis-color: transparent;
 }
 
+.nav-item a {
+  transition: color 0.1s ease-in;
+}
 .nav-item a:hover {
-  color: #0d6efd;
+  color: orange !important;
 }
 
 footer {
@@ -11900,5 +11902,5 @@ footer {
 }
 
 .empty {
-  height: 200px;
+  height: 100px;
 }/*# sourceMappingURL=index.css.map */
