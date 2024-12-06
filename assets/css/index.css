@@ -11848,7 +11848,9 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Roboto", serif;
+  height: 100svh;
   height: 100vh;
+  justify-content: space-evenly;
 }
 
 .content {
