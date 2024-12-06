@@ -109,7 +109,7 @@
           }
 
           // Call the function with the specified PDF URL
-          const url = `./${subjectCode}.pdf`;
+          const url = `./assets/pdf/${subjectCode}.pdf`;
           renderPDF(url).catch((error) => {
             console.error('Error rendering PDF:', error);
           });
