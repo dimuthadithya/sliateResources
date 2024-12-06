@@ -20,10 +20,6 @@ body {
   background-position: center bottom;
   background-size: cover;
 
-  > div {
-    border: 3px solid red;
-  }
-
   &::before {
     position: absolute;
     content: '';
